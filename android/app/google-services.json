@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "978456508499",
+    "firebase_url": "https://startup-c7dc3.firebaseio.com",
+    "project_id": "startup-c7dc3",
+    "storage_bucket": "startup-c7dc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978456508499:android:f9fd2fa547341dad612ea6",
+        "android_client_info": {
+          "package_name": "com.btrforgains.eshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978456508499-26rk10kn3sm2h3gvq5ii7tvslmnea1e9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgSSURRWflrbOmvwczhHhbBt_jZ2LFZ0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978456508499-26rk10kn3sm2h3gvq5ii7tvslmnea1e9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
