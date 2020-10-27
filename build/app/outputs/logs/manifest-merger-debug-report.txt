@@ -32,6 +32,7 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\tarun\.gradle\
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\508304cfcf060b1f70d98273a7bd5f6f\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\847fb09d990304c13bb25f074c6258a3\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\d9997a45fa8ae441570bc0677fe98d7d\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\9581ca0b53875f7b919aec42aff1ac07\exifinterface-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\a5c885c8bde2149cb3e860645e3d7525\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\8cd2c573267a119eda8b971e359c98f6\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\d812343860aa872b06d0b5564ccd148f\jetified-firebase-components-16.0.0\AndroidManifest.xml:15:1-23:12
@@ -197,6 +198,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\tarun\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\847fb09d990304c13bb25f074c6258a3\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\d9997a45fa8ae441570bc0677fe98d7d\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\d9997a45fa8ae441570bc0677fe98d7d\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\9581ca0b53875f7b919aec42aff1ac07\exifinterface-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\9581ca0b53875f7b919aec42aff1ac07\exifinterface-1.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\a5c885c8bde2149cb3e860645e3d7525\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\a5c885c8bde2149cb3e860645e3d7525\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\tarun\.gradle\caches\transforms-2\files-2.1\8cd2c573267a119eda8b971e359c98f6\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41

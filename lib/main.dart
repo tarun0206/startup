@@ -12,8 +12,7 @@ import 'Counters/changeAddresss.dart';
 import 'Counters/totalMoney.dart';
 import 'Store/storehome.dart';
 
-Future<void> main() async
-{
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   EcommerceApp.auth = FirebaseAuth.instance;
@@ -27,13 +26,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-            title: 'e-Shop',
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              primaryColor: Colors.green,
-            ),
-            home: SplashScreen()
-    );
+        title: 'e-Shop',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primaryColor: Colors.green,
+        ),
+        home: SplashScreen());
   }
 }
 
@@ -42,9 +40,7 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 
-
-class _SplashScreenState extends State<SplashScreen>
-{
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
@@ -52,16 +48,12 @@ class _SplashScreenState extends State<SplashScreen>
     displaySplash();
   }
 
-  displaySplash()
-  {
+  displaySplash() {
     Timer(Duration(seconds: 5), () async {
-      if(await EcommerceApp.auth.currentUser() != null)
-      {
+      if (await EcommerceApp.auth.currentUser() != null) {
         Route route = MaterialPageRoute(builder: (_) => StoreHome());
         Navigator.pushReplacement(context, route);
-      }
-      else
-      {
+      } else {
         Route route = MaterialPageRoute(builder: (_) => AuthenticScreen());
         Navigator.pushReplacement(context, route);
       }
@@ -82,17 +74,16 @@ class _SplashScreenState extends State<SplashScreen>
           ),
         ),
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset("images/welcome.png"),
-              SizedBox(height: 20.0,),
-              Text(
-                "Welcome to BTR Company",
-                style: TextStyle(color: Colors.white),
-              )
-            ]
-          ),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Image.asset("images/welcome.png"),
+            SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              "Welcome to BTR Company",
+              style: TextStyle(color: Colors.white),
+            )
+          ]),
         ),
       ),
     );

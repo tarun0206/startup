@@ -15,121 +15,165 @@ class MyDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          Container(
-            padding: EdgeInsets.only(top: 25.0, bottom: 10.0),
-            decoration: new BoxDecoration(
-              gradient: new LinearGradient(
-                colors: [Colors.blue, Colors.lightBlueAccent],
-                end: const FractionalOffset(1.0, 0.0),
-                begin: const FractionalOffset(0.0, 0.0),
-                stops: [0.0, 1.0],
-                tileMode: TileMode.clamp,
+          UserAccountsDrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.amber,
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(16),
+                  bottomRight: Radius.circular(16)),
+            ),
+            accountEmail: Text(
+              EcommerceApp.sharedPreferences.getString(EcommerceApp.userEmail),
+              style: TextStyle(
+                color: Colors.black,
               ),
             ),
-            child: Column(
-              children: [
-                Material(
-                  borderRadius: BorderRadius.all(Radius.circular(80.0)),
-                  elevation: 8.0,
-                  child: Container(
-                    height: 160.0,
-                    width: 160.0,
-                    child: CircleAvatar(
-                      backgroundImage: NetworkImage(
-                        EcommerceApp.sharedPreferences.getString(EcommerceApp.userAvatarUrl),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 10.0,),
-                Text(
-                  EcommerceApp.sharedPreferences.getString(EcommerceApp.userName),
-                  style: TextStyle(color: Colors.white, fontSize: 35.0, fontFamily: "Signatra"),
-                ),
-              ],
+            accountName: Text(
+              EcommerceApp.sharedPreferences.getString(EcommerceApp.userName),
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            ),
+            currentAccountPicture: ClipRRect(
+              borderRadius: BorderRadius.circular(70),
+              child: Image(
+                image: NetworkImage(EcommerceApp.sharedPreferences
+                    .getString(EcommerceApp.userAvatarUrl)),
+                width: 70,
+                height: 70,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
-          SizedBox(height: 12.0,),
+          SizedBox(
+            height: 6.3,
+          ),
           Container(
             padding: EdgeInsets.only(top: 1.0),
-            decoration: new BoxDecoration(
-              gradient: new LinearGradient(
-                colors: [Colors.blue, Colors.lightBlueAccent],
-                end: const FractionalOffset(1.0, 0.0),
-                begin: const FractionalOffset(0.0, 0.0),
-                stops: [0.0, 1.0],
-                tileMode: TileMode.clamp,
-              ),
-            ),
             child: Column(
               children: [
                 ListTile(
-                  leading: Icon(Icons.home, color: Colors.white,),
-                  title: Text("Home", style: TextStyle(color: Colors.white),),
-                  onTap: (){
-                    Route route = MaterialPageRoute(builder: (c) => StoreHome());
+                  leading: Icon(
+                    Icons.home,
+                  ),
+                  title: Text(
+                    "Home",
+                  ),
+                  onTap: () {
+                    Route route =
+                        MaterialPageRoute(builder: (c) => StoreHome());
                     Navigator.pushReplacement(context, route);
                   },
                 ),
-                Divider(height: 10.0, color: Colors.white, thickness: 6.0,),
-
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: Container(
+                    height: 1.0,
+                    width: 240.0,
+                    color: Colors.black,
+                  ),
+                ),
                 ListTile(
-                  leading: Icon(Icons.home, color: Colors.white,),
-                  title: Text("My Orders", style: TextStyle(color: Colors.white),),
-                  onTap: (){
+                  leading: Icon(
+                    Icons.shopping_bag,
+                  ),
+                  title: Text(
+                    "My Orders",
+                  ),
+                  onTap: () {
                     Route route = MaterialPageRoute(builder: (c) => MyOrders());
                     Navigator.pushReplacement(context, route);
                   },
                 ),
-                Divider(height: 10.0, color: Colors.white, thickness: 6.0,),
-
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: Container(
+                    height: 1.0,
+                    width: 240.0,
+                    color: Colors.black,
+                  ),
+                ),
                 ListTile(
-                  leading: Icon(Icons.home, color: Colors.white,),
-                  title: Text("My Cart", style: TextStyle(color: Colors.white),),
-                  onTap: (){
+                  leading: Icon(
+                    Icons.shopping_cart,
+                  ),
+                  title: Text(
+                    "My Cart",
+                  ),
+                  onTap: () {
                     Route route = MaterialPageRoute(builder: (c) => CartPage());
                     Navigator.pushReplacement(context, route);
                   },
                 ),
-                Divider(height: 10.0, color: Colors.white, thickness: 6.0,),
-
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: Container(
+                    height: .8,
+                    width: 240.0,
+                    color: Colors.black,
+                  ),
+                ),
                 ListTile(
-                  leading: Icon(Icons.home, color: Colors.white,),
-                  title: Text("Search", style: TextStyle(color: Colors.white),),
-                  onTap: (){
-                    Route route = MaterialPageRoute(builder: (c) => SearchProduct());
+                  leading: Icon(
+                    Icons.search,
+                  ),
+                  title: Text(
+                    "Search",
+                  ),
+                  onTap: () {
+                    Route route =
+                        MaterialPageRoute(builder: (c) => SearchProduct());
                     Navigator.pushReplacement(context, route);
                   },
                 ),
-                Divider(height: 10.0, color: Colors.white, thickness: 6.0,),
-
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: Container(
+                    height: 1.3,
+                    width: 240.0,
+                    color: Colors.black,
+                  ),
+                ),
                 ListTile(
-                  leading: Icon(Icons.home, color: Colors.white,),
-                  title: Text("Add New Address", style: TextStyle(color: Colors.white),),
-                  onTap: (){
-                    Route route = MaterialPageRoute(builder: (c) => AddAddress());
+                  leading: Icon(
+                    Icons.home_work,
+                  ),
+                  title: Text(
+                    "Add New Address",
+                  ),
+                  onTap: () {
+                    Route route =
+                        MaterialPageRoute(builder: (c) => AddAddress());
                     Navigator.pushReplacement(context, route);
                   },
                 ),
-                Divider(height: 10.0, color: Colors.white, thickness: 6.0,),
-
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: Container(
+                    height: 1.0,
+                    width: 240.0,
+                    color: Colors.black,
+                  ),
+                ),
                 ListTile(
-                  leading: Icon(Icons.home, color: Colors.white,),
-                  title: Text("Logout", style: TextStyle(color: Colors.white),),
-                  onTap: (){
-                    EcommerceApp.auth.signOut().then((c){
-                      Route route = MaterialPageRoute(builder: (c) => AuthenticScreen());
+                  leading: Icon(
+                    Icons.logout,
+                  ),
+                  title: Text(
+                    "Logout",
+                  ),
+                  onTap: () {
+                    EcommerceApp.auth.signOut().then((c) {
+                      Route route =
+                          MaterialPageRoute(builder: (c) => AuthenticScreen());
                       Navigator.pushReplacement(context, route);
                     });
                   },
                 ),
-                Divider(height: 10.0, color: Colors.white, thickness: 6.0,),
-
               ],
             ),
           ),
         ],
-
       ),
     );
   }

@@ -188,6 +188,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "google_fonts",
+      "rootUri": "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/google_fonts-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.3"
+    },
+    {
       "name": "http",
       "rootUri": "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.2",
       "packageUri": "lib/",
@@ -255,13 +261,19 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-0.5.0+1",
+      "rootUri": "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.22",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.1"
     },
     {
       "name": "path_provider_linux",
       "rootUri": "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "path_provider_macos",
+      "rootUri": "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+4",
       "packageUri": "lib/",
       "languageVersion": "2.1"
     },
@@ -434,7 +446,7 @@
       "languageVersion": "2.2"
     }
   ],
-  "generated": "2020-10-24T19:12:53.186933Z",
+  "generated": "2020-10-25T12:35:22.917699Z",
   "generator": "pub",
   "generatorVersion": "2.10.2"
 }

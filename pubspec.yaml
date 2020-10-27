@@ -19,8 +19,9 @@ dependencies:
   firebase_storage: ^3.1.1
   flutter_staggered_grid_view: ^0.3.0
   provider: ^4.0.4
-  path_provider: ^0.5.0+1
+  path_provider: ^1.6.22
   image: ^2.0.7
+  google_fonts: ^0.2.0
   intl:
 
 

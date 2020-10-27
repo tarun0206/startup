@@ -1,7 +1,9 @@
+import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_shop/Store/cart.dart';
 import 'package:e_shop/Store/product_page.dart';
 import 'package:e_shop/Counters/cartitemcounter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -12,6 +14,7 @@ import '../Widgets/loadingWidget.dart';
 import '../Widgets/myDrawer.dart';
 import '../Widgets/searchBox.dart';
 import '../Models/item.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 double width;
 
@@ -39,16 +42,20 @@ class _StoreHomeState extends State<StoreHome> {
             ),
           ),
           title: Text(
-            "Protein Shop",
-            style: TextStyle(fontSize: 55.0, color: Colors.white, fontFamily: "Signatra"),
+            "BTR OP",
+            style: TextStyle(
+                fontSize: 55.0, color: Colors.white, fontFamily: "Signatra"),
           ),
           centerTitle: true,
           actions: [
             Stack(
               children: [
                 IconButton(
-                  icon: Icon(Icons.shopping_cart, color: Colors.white,),
-                  onPressed: (){
+                  icon: Icon(
+                    Icons.shopping_cart,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
                     Route route = MaterialPageRoute(builder: (c) => CartPage());
                     Navigator.pushReplacement(context, route);
                   },
@@ -65,11 +72,13 @@ class _StoreHomeState extends State<StoreHome> {
                         top: 3.0,
                         bottom: 4.0,
                         child: Consumer<CartItemCounter>(
-                          builder: (context, counter, _)
-                          {
+                          builder: (context, counter, _) {
                             return Text(
                               counter.count.toString(),
-                              style: TextStyle(color: Colors.white, fontSize: 12.0, fontWeight: FontWeight.w500),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.w500),
                             );
                           },
                         ),
@@ -81,27 +90,139 @@ class _StoreHomeState extends State<StoreHome> {
             ),
           ],
         ),
+        body: MyStatelessWidget(),
         drawer: MyDrawer(),
       ),
     );
   }
 }
 
-
+class MyStatelessWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      child: Column(
+        children: [
+          Divider(
+            height: 10.0,
+            color: Colors.white,
+            thickness: 6.0,
+          ),
+          RaisedButton(
+            onPressed: () {},
+            shape: StadiumBorder(),
+            textColor: Colors.white,
+            padding: EdgeInsets.all(0.0),
+            child: Container(
+              width: 370.0,
+              height: 70.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(35),
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xffa817e6),
+                    Color(0xffDD94ff),
+                  ],
+                ),
+              ),
+              child: Text(
+                'Products',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.fredokaOne(
+                  textStyle: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: .7,
+                    fontSize: 40,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Divider(
+            height: 10.0,
+            color: Colors.white,
+            thickness: 6.0,
+          ),
+          RaisedButton(
+            onPressed: () {},
+            shape: StadiumBorder(),
+            textColor: Colors.white,
+            padding: EdgeInsets.all(0.0),
+            child: Container(
+              width: 370,
+              height: 70.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(35),
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0xFF0D47A1),
+                    Color(0xFF1976d3),
+                    Color(0xFF42A5F5),
+                  ],
+                ),
+              ),
+              child: Text(
+                'Order History',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.fredokaOne(
+                  textStyle: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: .7,
+                    fontSize: 40,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Divider(
+            height: 10.0,
+            color: Colors.white,
+            thickness: 6.0,
+          ),
+          RaisedButton(
+            onPressed: () {},
+            shape: StadiumBorder(),
+            textColor: Colors.white,
+            padding: EdgeInsets.all(0.0),
+            child: Container(
+              width: 370,
+              height: 70.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(35),
+                gradient: LinearGradient(
+                  colors: [Colors.red, Colors.orangeAccent],
+                ),
+              ),
+              child: Text(
+                'Analytics',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.fredokaOne(
+                  textStyle: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: .7,
+                    fontSize: 40,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
 Widget sourceInfo(ItemModel model, BuildContext context,
     {Color background, removeCartFunction}) {
   return InkWell();
 }
 
-
-
 Widget card({Color primaryColor = Colors.redAccent, String imgPath}) {
   return Container();
 }
 
-
-
-void checkItemInCart(String productID, BuildContext context)
-{
-}
+void checkItemInCart(String productID, BuildContext context) {}
