@@ -14,7 +14,8 @@ import '../Widgets/loadingWidget.dart';
 import '../Widgets/myDrawer.dart';
 import '../Widgets/searchBox.dart';
 import '../Models/item.dart';
-import 'package:google_fonts/google_fonts.dart';
+import './allProducts.dart';
+import 'package:e_shop/Store/allProducts.dart';
 
 double width;
 
@@ -71,6 +72,7 @@ class _StoreHomeState extends State<StoreHome> {
                       Positioned(
                         top: 3.0,
                         bottom: 4.0,
+                        left: 6.0,
                         child: Consumer<CartItemCounter>(
                           builder: (context, counter, _) {
                             return Text(
@@ -110,7 +112,10 @@ class MyStatelessWidget extends StatelessWidget {
             thickness: 6.0,
           ),
           RaisedButton(
-            onPressed: () {},
+            onPressed: () {
+              Route route = MaterialPageRoute(builder: (c) => AllProducts());
+              Navigator.pushReplacement(context, route);
+            },
             shape: StadiumBorder(),
             textColor: Colors.white,
             padding: EdgeInsets.all(0.0),
